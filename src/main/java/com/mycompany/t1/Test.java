@@ -10,8 +10,8 @@ package com.mycompany.t1;
  */
 public class Test {
     public static void main(String[] argv){
-        testItem();
-        testArray();
+//        testItem();
+//        testArray();
         testInventory();
     }
     public static void testItem(){
