@@ -36,6 +36,10 @@ public class Test {
         }
     }
     public static void testInventory(){
-        
+        StoreInventory inv = new StoreInventory("Bukit Batok");
+        System.out.println(inv.getBranch());
+        inv.addItem(null);
+        inv.addItem(new StoreItem("item1","name1",1,100));
+        inv.addItem(new StoreItem("item2","name2",2,200));
     }
 }
