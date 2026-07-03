@@ -28,7 +28,11 @@ public class Test {
         items[0]= new StoreItem("item 1", "name 1",1,100);
         items[0]= new StoreItem("item 3", "name 3",3,300);
         for(int i = 0; i< items.length; i++){
-            System.out.println(items[i]);
+            if (items[i] != null ){
+                 System.out.println(items[i]);
+                 System.out.println(items[i].getID());
+            }
+           
         }
     }
     public static void testInventory(){
