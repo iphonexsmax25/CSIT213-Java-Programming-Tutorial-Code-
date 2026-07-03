@@ -19,4 +19,11 @@ public class StoreItem {
         name = pName;
         qty = pQty; 
     }
+    // Get/set methods 
+    public String getID(){
+        return id;
+    }
+    public int getQty(){
+        return qty;
+    }
 }
