@@ -14,9 +14,13 @@ public class StoreItem {
     private double price;
     private  int qty; 
     
+    public String toString(){
+        return String.format("StoreItem [%s $%.2f %d]", id, price, qty);
+    }
     public StoreItem(String pID, String pName, double pPrice, int pQty){
         id = pID;
         name = pName;
+        price = pPrice;
         qty = pQty; 
     }
     // Get/set methods 

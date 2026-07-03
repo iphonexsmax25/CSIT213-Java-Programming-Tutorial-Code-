@@ -18,6 +18,7 @@ public class Test {
         StoreItem item1 = new StoreItem("item1", "name 1", 1.5, 100);
         System.out.println(item1.getID());
         System.out.println(item1.getQty());
+        System.out.println(item1);
     }
     public static void testArray(){
         
