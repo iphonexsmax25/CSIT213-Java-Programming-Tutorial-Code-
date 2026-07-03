@@ -45,10 +45,16 @@ public class StoreInventory {
                 }
             }
         }
-        return false;
+        return false; // No such itemID
         
     }
     public String toString(){
-        return "";
+        String result = branch;
+        for (int i = 0; i < items.length; i++ ){
+            if (items[i] != null){
+                result = result + " " + items[i].toString();
+            }
+        }
+        return result;
     }
 }
