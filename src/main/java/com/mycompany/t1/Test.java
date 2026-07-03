@@ -21,6 +21,7 @@ public class Test {
         System.out.println(item1);
     }
     public static void testArray(){
+        StoreItem[] items =new StoreItem[3];
         
     }
     public static void testInventory(){
