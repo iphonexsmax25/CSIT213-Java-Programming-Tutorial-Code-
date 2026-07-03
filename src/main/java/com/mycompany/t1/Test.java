@@ -41,5 +41,9 @@ public class Test {
         inv.addItem(null);
         inv.addItem(new StoreItem("item1","name1",1,100));
         inv.addItem(new StoreItem("item2","name2",2,200));
+        System.out.println(inv);
+        inv.delItem(null);
+        inv.delItem("item1");
+        System.out.println(inv);
     }
 }
