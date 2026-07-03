@@ -20,7 +20,7 @@ public class Test {
     public static void testArray(){
         
     }
-      public static void testInventory(){
+    public static void testInventory(){
         
     }
 }
