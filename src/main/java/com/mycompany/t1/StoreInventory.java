@@ -33,7 +33,20 @@ public class StoreInventory {
          return false; // No space in the array 
     }
     public boolean delItem(String itemID){
+        if (itemID == null){
+           return false; 
+        }
+        for (int i = 0; i <items.length; i++){
+            if (items[i] != null){
+                if (items[i].getID().equalsIgnoreCase(itemID)){
+                    items[i] = null;
+                    return true;
+                    
+                }
+            }
+        }
         return false;
+        
     }
     public String toString(){
         return "";
