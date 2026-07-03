@@ -22,7 +22,8 @@ public class Test {
     }
     public static void testArray(){
         StoreItem[] items =new StoreItem[3];
-        
+        System.out.println(items.length);
+        System.out.println(items[0] == null);
     }
     public static void testInventory(){
         
