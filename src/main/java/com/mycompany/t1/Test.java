@@ -15,7 +15,9 @@ public class Test {
         testInventory();
     }
     public static void testItem(){
-        
+        StoreItem item1 = new StoreItem("item1", "name 1", 1.5, 100);
+        System.out.println(item1.getID());
+        System.out.println(item1.getQty());
     }
     public static void testArray(){
         
