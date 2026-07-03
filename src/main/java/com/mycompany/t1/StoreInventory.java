@@ -52,7 +52,7 @@ public class StoreInventory {
         String result = branch;
         for (int i = 0; i < items.length; i++ ){
             if (items[i] != null){
-                result = result + " " + items[i].toString();
+                result = result + "\n" + items[i].toString();
             }
         }
         return result;
