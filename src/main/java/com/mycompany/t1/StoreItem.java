@@ -26,4 +26,9 @@ public class StoreItem {
     public int getQty(){
         return qty;
     }
+    public void setQTY(int newQty){
+        if (newQty >= 0){
+            qty = newQty;
+        }
+    }
 }
