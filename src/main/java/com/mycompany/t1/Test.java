@@ -24,6 +24,12 @@ public class Test {
         StoreItem[] items =new StoreItem[3];
         System.out.println(items.length);
         System.out.println(items[0] == null);
+        
+        items[0]= new StoreItem("item 1", "name 1",1,100);
+        items[0]= new StoreItem("item 3", "name 3",3,300);
+        for(int i = 0; i< items.length; i++){
+            
+        }
     }
     public static void testInventory(){
         
