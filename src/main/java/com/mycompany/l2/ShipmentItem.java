@@ -25,7 +25,14 @@ public class ShipmentItem {
         return String.format(" ShipmentItem %s %d", code, qty);
     }
     public boolean equals(Object other){
-        return false;
+        if(other == null)
+            return false;
+        if (other instanceof ShipmentItem ==  false)
+            return false;
+        ShipmentItem temp = (ShipmentItem) other;
+        return (code.equalsIgnoreCase(temp.code));
     }
+        
+        
     
 }
