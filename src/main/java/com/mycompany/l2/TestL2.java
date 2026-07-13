@@ -10,7 +10,17 @@ package com.mycompany.l2;
  */
 public class TestL2 {
      public static void main(String[] args){
-         System.out.println("Hi");
+         testItem();
+     }
+     public static void testItem(){
+         ShipmentItem  sItem1 = new ShipmentItem("p1", 100);
+         ShipmentItem  sItem2 = new ShipmentItem("p2", 200);
+         ShipmentItem  sItem3 = new ShipmentItem("p2", 200);
+         
+         System.out.println(sItem1);
+         System.out.println(sItem2);
+         System.out.println(sItem1.equals(sItem2));
+         System.out.println(sItem2.equals(sItem3));
      }
     
 }

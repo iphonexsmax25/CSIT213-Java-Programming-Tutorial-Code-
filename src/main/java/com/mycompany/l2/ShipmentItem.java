@@ -24,5 +24,8 @@ public class ShipmentItem {
     public String toString(){
         return String.format(" ShipmentItem %s %d", code, qty);
     }
+    public boolean equals(Object other){
+        return false;
+    }
     
 }
