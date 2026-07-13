@@ -21,6 +21,12 @@ public class TestL2 {
          System.out.println(sItem2);
          System.out.println(sItem1.equals(sItem2));
          System.out.println(sItem2.equals(sItem3));
+         //REquest Item
+         RequestItem rItem1 = new RequestItem("p1", 50);
+         RequestItem rItem2 = new RequestItem("p2", 500);
+         System.out.println(rItem1);
+         System.out.println(rItem2);
+         System.out.println(rItem1.equals(rItem2));
      }
     
 }

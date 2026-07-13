@@ -29,7 +29,15 @@ public class RequestItem {
         }
     }
     public String toString(){
-        return String.format("", code, qtyRequested, qtySupplied);
+        return String.format("RequestItem %s %d %d", code, qtyRequested, qtySupplied);
+    }
+    public boolean equals(Object other){
+        if(other == null)
+            return false;
+        if (other instanceof RequestItem ==  false)
+            return false;
+        RequestItem temp = (RequestItem) other;
+        return (code.equalsIgnoreCase(temp.code));
     }
     
             
