@@ -28,7 +28,11 @@ public class TestL2 {
          mgr.topUp(sItems);
          System.out.println(mgr);
          // dispatch
-         
+         ArrayList<RequestItem> rItems = new ArrayList<>();
+         rItems.add(new RequestItem("p1", 90));
+         rItems.add(new RequestItem("p2", 300));
+         mgr.dispatch(rItems);
+         System.out.println(mgr);
      }
      public static void testHashMap(){
          HashMap<String, Integer> inventory = new HashMap<>();
