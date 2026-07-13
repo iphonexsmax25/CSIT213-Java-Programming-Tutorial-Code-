@@ -12,27 +12,20 @@ public class ShipmentItem {
     private String code;
     private int qty;
     public ShipmentItem(String pCode, int pQty){
-        code =pCode; 
+        code = pCode;
         qty = pQty;
     }
-    public String getCode(){
-        return code;
-    }
-    public int getQty(){
-        return qty;
-    }
+    public String getCode(){ return code; }
+    public int getQty(){ return qty; }
     public String toString(){
-        return String.format(" ShipmentItem %s %d", code, qty);
+        return String.format("ShipmentItem %s %d", code, qty);
     }
     public boolean equals(Object other){
-        if(other == null)
+        if (other == null)
             return false;
-        if (other instanceof ShipmentItem ==  false)
+        if (other instanceof ShipmentItem == false)
             return false;
-        ShipmentItem temp = (ShipmentItem) other;
+        ShipmentItem temp = (ShipmentItem)other;
         return (code.equalsIgnoreCase(temp.code));
     }
-        
-        
-    
 }
