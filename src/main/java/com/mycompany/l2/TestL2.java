@@ -15,7 +15,20 @@ public class TestL2 {
      public static void main(String[] args){
          //testItem();
          //testArrayList();
-         testHashMap();
+         //testHashMap();
+         testMgr();
+     }
+     public static void testMgr(){
+         WarehouseMgr mgr = new WarehouseMgr("Bugis");
+         System.out.println(mgr);
+         // topup
+         ArrayList<ShipmentItem> sItems = new ArrayList<>();
+         sItems.add(new ShipmentItem("p1", 100));
+         sItems.add(new ShipmentItem("p2", 200));
+         mgr.topUp(sItems);
+         System.out.println(mgr);
+         // dispatch
+         
      }
      public static void testHashMap(){
          HashMap<String, Integer> inventory = new HashMap<>();
