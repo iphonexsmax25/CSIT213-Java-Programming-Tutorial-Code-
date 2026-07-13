@@ -39,6 +39,10 @@ public class RequestItem {
         RequestItem temp = (RequestItem) other;
         return (code.equalsIgnoreCase(temp.code));
     }
+
+    void setQtySupplied(int qtyOnhand) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
             
 }

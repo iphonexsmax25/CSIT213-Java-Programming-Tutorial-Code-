@@ -30,8 +30,8 @@ public class WarehouseMgr {
     public void topUp(ArrayList<ShipmentItem> items){
         for(ShipmentItem oneItem : items){
             if(oneItem != null){
-                String code =oneItem.getCode();
-                int qty =oneItem.getQty();
+                String code = oneItem.getCode();
+                int qty = oneItem.getQty();
                 if(inventory.containsKey(code)){
                     int qtyOnhand = inventory.get(code);
                     int totalQty = qty + qtyOnhand;
@@ -43,7 +43,24 @@ public class WarehouseMgr {
         }
     }
     public void dispatch(ArrayList<RequestItem> items){
-        
+        for (RequestItem oneItem : items){
+            if (oneItem != null){
+                String code = oneItem.getCode();
+                int qtyRequested = oneItem.getQtyRequested();
+                if (inventory.containsKey(code)){
+                    int qtyOnhand = inventory.get(code);
+                    if (qtyOnhand >= qtyRequested){
+                        int balance = qtyOnhand - qtyRequested;
+                        oneItem.setQtySupplied(qtyRequested);
+                        inventory.put(code, balance);
+                        
+                    } else{
+                        oneItem.setQtySupplied(qtyOnhand);
+                        inventory.put(code, 0);
+                    }
+                }
+            }
+        }
     }
      
 }
