@@ -9,5 +9,20 @@ package com.mycompany.l2;
  * @author limis
  */
 public class ShipmentItem {
+    private String code;
+    private int qty;
+    public ShipmentItem(String pCode, int pQty){
+        code =pCode; 
+        qty = pQty;
+    }
+    public String getCode(){
+        return code;
+    }
+    public int getQty(){
+        return qty;
+    }
+    public String toString(){
+        return String.format(" ShipmentItem %s %d", code, qty);
+    }
     
 }
