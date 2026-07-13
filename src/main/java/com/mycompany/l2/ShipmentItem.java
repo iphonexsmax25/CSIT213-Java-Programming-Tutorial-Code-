@@ -15,11 +15,19 @@ public class ShipmentItem {
         code = pCode;
         qty = pQty;
     }
-    public String getCode(){ return code; }
-    public int getQty(){ return qty; }
+    public String getCode(){ 
+        return code;
+    }
+         
+        
+    public int getQty(){
+        return qty;
+    } 
+    
     public String toString(){
         return String.format("ShipmentItem %s %d", code, qty);
     }
+    
     public boolean equals(Object other){
         if (other == null)
             return false;
