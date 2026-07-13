@@ -9,10 +9,22 @@ package com.mycompany.l2;
  * @author limis
  */
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class TestL2 {
      public static void main(String[] args){
-         // testItem();
-         testArrayList();
+         //testItem();
+         //testArrayList();
+         testHashMap();
+     }
+     public static void testHashMap(){
+         HashMap<String, Integer> inventory = new HashMap<>();
+         inventory.put("p1", 200);
+         inventory.put("p2", 10);
+         inventory.put("p1", 0);
+         for(String code : inventory.keySet()){
+             System.out.println(code + " " + inventory.get(code));
+         }
      }
      public static void testArrayList(){
          ArrayList<ShipmentItem> sItems = new ArrayList<>();
@@ -20,6 +32,10 @@ public class TestL2 {
          sItems.add(new ShipmentItem("p2", 200));
          for ( int i = 0; i< sItems.size(); i++){
              System.out.println(sItems.get(i));
+         }
+         // for eachloop
+         for (ShipmentItem oneItem : sItems){
+             System.out.println(oneItem);
          }
          
      }
