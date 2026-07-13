@@ -9,5 +9,8 @@ package com.mycompany.l2;
  * @author limis
  */
 public class TestL2 {
+     public static void main(String[] args){
+         System.out.println("Hi");
+     }
     
 }
