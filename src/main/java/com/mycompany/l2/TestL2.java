@@ -33,6 +33,10 @@ public class TestL2 {
          rItems.add(new RequestItem("p2", 300));
          mgr.dispatch(rItems);
          System.out.println(mgr);
+         // Verify ArrayList <RequestItem>
+         for (RequestItem oneItem : rItems){
+             System.out.println(oneItem);
+         }
      }
      public static void testHashMap(){
          HashMap<String, Integer> inventory = new HashMap<>();
