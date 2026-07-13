@@ -13,9 +13,9 @@ import java.util.HashMap;
 
 public class Test {
     public static void main(String[] argv){
-        //testItem();
-        //testArrayList();
-        //testHashMap();
+        testItem();
+        testArrayList();
+        testHashMap();
         testMgr();
     }
     public static void testMgr(){
