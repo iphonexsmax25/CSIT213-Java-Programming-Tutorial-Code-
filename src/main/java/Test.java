@@ -1,9 +1,16 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 public class Test {    
     public static void main(String[] args){
-        // test1();
+        test1();
         test2();
+        test3();
+    }
+    public static void test3(){
+        ClaimManager mgr = new ClaimManager();
+        mgr.load();
+        System.out.println(mgr);
     }
     public static void test2(){
         ArrayList<Claim> claims = new ArrayList<>();

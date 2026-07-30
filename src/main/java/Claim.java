@@ -6,7 +6,10 @@ public class Claim {
         this.empId = empId;
         this.dateofClaim = dateofClaim;
     }
-    public String getEmpId(){ return empId; }
+    public String getEmpId(){ 
+        return empId; 
+    }
+        
     public int getYearofClaim(){
         return dateofClaim.getYear();
     }
