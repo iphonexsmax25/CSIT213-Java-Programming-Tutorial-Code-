@@ -30,5 +30,14 @@ public class ClaimManager {
         }
         return result.toString();
     }
+    public double getTotalTp(){
+        double total = 0;
+        for (Claim c : claims){
+            if (c instanceof ClaimTpt){
+                total += c.getClaimAmount();
+            }
+        }
+        return total;
+    }
     
 }
