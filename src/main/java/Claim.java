@@ -1,12 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author limis
- */
+import java.time.LocalDate;
 public class Claim {
-    
+    private String empId;
+    private LocalDate dateofClaim;
+    public Claim(String empId, LocalDate dateofClaim){
+        this.empId = empId;
+        this.dateofClaim = dateofClaim;
+    }
+    public String getEmpId(){ return empId; }
+    public int getYearofClaim(){
+        return dateofClaim.getYear();
+    }
+    public int getMonthofClaim(){
+        return dateofClaim.getMonthValue();
+    }
+    public double getClaimAmount(){
+        return 20;
+    }
+    public String toString(){
+        return String.format("%s %s $%.2f", empId, dateofClaim, getClaimAmount());
+    }
 }
