@@ -36,7 +36,7 @@ public class PaymentManager {
                 } 
                 else {
                     // Subscription or PremiumSubscription
-                    Local Date
+                    
                 }
                 
             }
