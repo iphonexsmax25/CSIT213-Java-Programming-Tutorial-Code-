@@ -21,7 +21,7 @@ public class Subscription implements Payable{
     
     public String toString(){
         String className = this.getClass().getSimpleName();
-        return String.format("%s %s $%2.f ", className ,code, startDate, getAmount());
+        return String.format("%s %s %s $%.2f ", className, code, startDate, getAmount());
     }
     
     public boolean equals(Object other){
