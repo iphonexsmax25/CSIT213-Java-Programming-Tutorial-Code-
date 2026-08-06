@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
 
-public class PremiumSubcription extends Subscription{
+public class PremiumSubscription extends Subscription{
     private double disRate;
     
-    public PremiumSubcription(String code,  String name,  LocalDate startDate,  LocalDate expiryDate,  double fee, double disRate){
+    public PremiumSubscription(String code,  String name,  LocalDate startDate,  LocalDate expiryDate,  double fee, double disRate){
         super(code, name, startDate, expiryDate, fee);
         this.disRate = disRate;
     }
