@@ -27,16 +27,28 @@ public class PaymentManager {
                     LocalDate dRented = LocalDate.parse(values[3], fmt );
                     int qty = Integer.parseInt(values[4]);
                     double cost = Double.parseDouble(values[5]);
-                    if(qty <= 0 || cost <= 0){
+                    if(qty <= 0 || cost <= 0)
                         continue;
-                        EquipRental r = new EquipRental(values[1], values[2], dRented, qty, cost);
-                        if (items.contains(r) == false)
-                            items.add(r);
-                    }
+                    EquipRental r = new EquipRental(values[1], values[2], dRented, qty, cost);
+                    if (items.contains(r) == false)
+                        items.add(r);
                 } 
                 else {
                     // Subscription or PremiumSubscription
-                    
+                    LocalDate sDate = LocalDate.parse(values[3], fmt);
+                    LocalDate eDate = LocalDate.parse(values[4], fmt);
+                    double fee =Double.parseDouble(values[5]);
+                    Subscription s = null;
+                    if(values[0].equals("S")){
+                        s = new Subscription(values[1], values[2], sDate, eDate, fee);
+                    }
+                    else{
+                        double disRate = Double.parseDouble(values[6]);
+                        s = new PremiumSubscription(values[1], values[2], sDate, eDate, fee, disRate);
+                    }
+                    //Check duplicate 
+                    if (items.contains(s)== false)
+                        items.add(s);
                 }
                 
             }
