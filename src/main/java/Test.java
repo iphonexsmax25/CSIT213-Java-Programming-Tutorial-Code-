@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Test {
     public static void main(String[] args){
         test1();
+        test2();
         
     }
     public static void test2(){
