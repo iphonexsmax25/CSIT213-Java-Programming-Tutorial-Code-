@@ -7,6 +7,8 @@
  *
  * @author limis
  */
-public class Payable {
+public interface Payable {
+    public double getAmount();
+    
     
 }
