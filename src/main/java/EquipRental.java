@@ -3,7 +3,7 @@ import java.time.LocalDate;
 
 
 
-public class EquipRental {
+public class EquipRental implements Payable {
     private String code, description;
     private LocalDate dateRented;
     private int qty;
