@@ -1,12 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import java.time.LocalDate;
 
-/**
- *
- * @author limis
- */
-public class PremiumSubcription {
+
+public class PremiumSubcription extends Subscription{
+    private double disRate;
     
+    public PremiumSubcription(String code,  String name,  LocalDate startDate,  LocalDate expiryDate,  double fee, double disRate){
+        super(code, name, startDate, expiryDate, fee);
+        this.disRate = disRate;
+    }
+    
+    public double getAmount(){
+        return super.getAmount() * (1- disRate);
+    }
 }

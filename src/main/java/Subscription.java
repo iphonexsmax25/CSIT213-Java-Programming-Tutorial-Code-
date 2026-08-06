@@ -1,12 +1,12 @@
 import java.time.LocalDate;
 
 
-public class Subcription implements Payable{
+public class Subscription implements Payable{
     private String code, name;
     private LocalDate startDate, expiryDate;
     private double fee;
     
-    public Subcription( String code, String name, 
+    public Subscription( String code, String name, 
             LocalDate startDate, LocalDate expiryDate, double fee ){
         this.code = code;
         this.name = name;
@@ -28,10 +28,10 @@ public class Subcription implements Payable{
             return false;
         }
             
-        if (other instanceof Subcription == false){
+        if (other instanceof Subscription == false){
             return false;
         }
-        Subcription s = (Subcription)other;
+        Subscription s = (Subscription)other;
         return code.equalsIgnoreCase(s.code);
         
     }
