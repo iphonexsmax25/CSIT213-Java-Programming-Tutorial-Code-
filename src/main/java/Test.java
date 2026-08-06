@@ -7,8 +7,17 @@ public class Test {
     public static void main(String[] args){
         test1();
         test2();
+        test3();
         
     }
+    public static void test3(){
+        PaymentManager mgr = new PaymentManager();
+        mgr.load("lab_4_data.txt");
+        System.out.println(mgr);
+        System.out.println(mgr.getTotalAmount());
+        System.out.println(mgr.getTotalSubscription());
+    }
+    
     public static void test2(){
         ArrayList<Payable> items = new ArrayList<>();
         EquipRental r = new EquipRental("r1", "desc 1", LocalDate.of(2026, 3, 20), 50, 10);
@@ -22,6 +31,7 @@ public class Test {
             System.out.println(item);
         }
     }
+    
     public static void test1(){
         EquipRental r = new EquipRental("r1", "desc 1", LocalDate.of(2026, 3, 20), 50, 10);
         System.out.println(r);
