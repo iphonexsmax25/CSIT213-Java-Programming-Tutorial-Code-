@@ -74,11 +74,15 @@ public class PaymentManager {
     
     public double getTotalAmount(){
         double total = 0;
+        for (Payable p : items){
+            total = total +p.getAmount();
+        }
         return total;
     }
     
     public double getTotalSubscription(){
         double total = 0; 
+        
         return total;
     }
 }
