@@ -17,6 +17,13 @@ public class Claim {
         return dateOfClaim.getYear();
     }
     
+    public double getClaimAmount(){
+        return 20;
+    }
+    
+    public String toString(){
+        return String.format("%s %s $%.2f", empId, dateOfClaim, getClaimAmount());
+    } 
     
     
 }
