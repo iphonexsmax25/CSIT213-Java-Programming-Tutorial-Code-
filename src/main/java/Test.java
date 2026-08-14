@@ -14,7 +14,7 @@ public class Test {
         System.out.println(c1.getYearOfClaim());
         System.out.println(c1.getMonthOfClaim());
         System.out.println(c1);
-        // ClaimTp
+        // ClaimTpt
         ClaimTpt t1 = new ClaimTpt("e2", LocalDate.of(2026, 6, 30), 200);
         System.out.println(t1);
         // ClaimOT
@@ -34,14 +34,14 @@ public class Test {
         double total = 0;
         for (Claim c : claims) {
             System.out.println(c);
-            total += c.getClaimAmount();
+            total = total + c.getClaimAmount();
         }
         System.out.println(total);
         // Add all ClaimOT instances
         double totalOT = 0;
         for (Claim c : claims) {
             if (c instanceof ClaimOT) {
-                totalOT += c.getClaimAmount();
+                totalOT = totalOT + c.getClaimAmount();
             }
         }
         System.out.println(totalOT);
