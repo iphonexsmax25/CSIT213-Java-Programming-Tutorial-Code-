@@ -43,6 +43,33 @@ public class ClaimManager {
         
     }
     
+    public String toString(){
+        StringBuilder result = new StringBuilder();
+        for (Claim c : claims){
+            result.append(c.toString() + "\n");            
+        }
+        return result.toString();
+      }
+    
+    public double getTotalTp(){
+        double total = 0;
+        for (Claim c: claims){
+            if (c instanceof ClaimTpt){
+                total += c.getClaimAmount();
+            }
+        }
+        return total;
+    }
+    
+    public double getTotalClaim(String empId){
+        double total = 0;
+        for (Claim c : claims){
+            if (empId.equalsIgnoreCase(c.getEmpId())){
+                total += c.getClaimAmount();
+            }
+        }
+        return total;
+    }
     
     
 }
