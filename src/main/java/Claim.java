@@ -16,6 +16,9 @@ public class Claim {
     public int getYearOfClaim(){
         return dateOfClaim.getYear();
     }
+    public int getMonthOfClaim(){
+        return dateOfClaim.getMonthValue();
+    }
     
     public double getClaimAmount(){
         return 20;
