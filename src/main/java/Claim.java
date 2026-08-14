@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
 
-public class Claim {
+public class Claim{
     private String empId;
-    private  LocalDate dateOfClaim;
-    public Claim(String empId, LocalDate dateofClaim){
+    private LocalDate dateOfClaim;
+    public Claim(String empId, LocalDate dateOfClaim){
         this.empId = empId;
         this.dateOfClaim = dateOfClaim;
     }
@@ -16,6 +16,7 @@ public class Claim {
     public int getYearOfClaim(){
         return dateOfClaim.getYear();
     }
+    
     public int getMonthOfClaim(){
         return dateOfClaim.getMonthValue();
     }
@@ -26,7 +27,5 @@ public class Claim {
     
     public String toString(){
         return String.format("%s %s $%.2f", empId, dateOfClaim, getClaimAmount());
-    } 
-    
-    
+    }
 }

@@ -11,10 +11,11 @@ public class Test {
     }
     
     public static void test1(){
-        Claim c1 = new Claim ("e1", LocalDate.of(2026, 4, 25));
-        System.out.println(c1.getYearOfClaim());
-        System.out.println(c1.getMonthOfClaim());
-        System.out.println(c1);
+        Claim cl = new Claim("e1", LocalDate.of(2026, 4, 25));
+        System.out.println(cl.getYearOfClaim());
+        System.out.println(cl.getMonthOfClaim());
+        System.out.println(cl);
+
         // ClaimTpt
         ClaimTpt t1 = new ClaimTpt("e2", LocalDate.of(2026, 6, 30),200);
         System.out.println(t1);
